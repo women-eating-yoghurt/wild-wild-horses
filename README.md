@@ -1,6 +1,5 @@
 # wild-wild-horses
 
-
 A static website starter built with [Eleventy (11ty)](https://www.11ty.dev/), managed via [Pages CMS](https://pagescms.org/), and deployed for free on [GitHub Pages](https://pages.github.com/).
 
 **Stack at a glance:**
