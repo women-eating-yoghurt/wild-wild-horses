@@ -1,31 +1,31 @@
 /*
- * tokens.css — design tokens for the Bark-inspired warm earth theme
+ * tokens.css — design tokens
  *
- * Warm, natural, earthy palette with organic serif typography.
- * Inspired by community/nature/non-profit sites: think warm beiges,
- * forest greens, earthy terracottas, and generous whitespace.
+ * Palette drawn from a hand-painted community mural: dominant golden
+ * yellow, dusty sky blue, chalky off-white surfaces, and near-black
+ * painted lettering. Warm, handmade, community non-profit feel.
  */
 
 :root {
   /* ── Color palette ─────────────────────────────────────────────── */
-  --color-accent:        #5c7a4e;   /* forest green */
-  --color-accent-hover:  #4a6340;   /* darker green */
-  --color-accent-subtle: #eef3eb;   /* pale green */
+  --color-accent:        #c9991a;   /* golden yellow */
+  --color-accent-hover:  #a87d10;   /* deeper gold */
+  --color-accent-subtle: #faf3dc;   /* pale yellow tint */
 
-  --color-surface:       #faf8f5;   /* warm off-white */
-  --color-surface-alt:   #f3ede4;   /* warm beige */
+  --color-surface:       #f7f2e8;   /* chalky off-white */
+  --color-surface-alt:   #ede5d0;   /* warm tan */
   --color-surface-raised:#ffffff;
-  --color-border:        #ddd5c8;
-  --color-border-light:  #ebe5dc;
+  --color-border:        #d8ccb0;
+  --color-border-light:  #ece5d2;
 
-  --color-text:          #2c2416;   /* very dark brown */
-  --color-text-muted:    #6b5e4e;   /* medium brown */
-  --color-text-subtle:   #9c8e80;   /* light brown */
-  --color-text-inverse:  #ffffff;
+  --color-text:          #1e1c18;   /* near-black charcoal */
+  --color-text-muted:    #5a5340;   /* warm dark tan */
+  --color-text-subtle:   #96886e;   /* mid tan */
+  --color-text-inverse:  #f7f2e8;
 
-  --color-footer-bg:     #2c2416;
-  --color-footer-text:   rgba(250, 248, 245, 0.65);
-  --color-footer-link:   rgba(250, 248, 245, 0.75);
+  --color-footer-bg:     #1e1c18;
+  --color-footer-text:   rgba(247, 242, 232, 0.65);
+  --color-footer-link:   rgba(247, 242, 232, 0.80);
 
   /* ── Typography ────────────────────────────────────────────────── */
   --font-sans:    "Lato", system-ui, -apple-system, Helvetica, Arial, sans-serif;
@@ -87,10 +87,10 @@
   --gutter:        clamp(1rem, 4vw, 2rem);
 
   /* ── Shadows ───────────────────────────────────────────────────── */
-  --shadow-sm:  0 1px 2px 0 rgba(44, 36, 22, 0.06);
-  --shadow:     0 1px 3px 0 rgba(44, 36, 22, 0.10), 0 1px 2px -1px rgba(44, 36, 22, 0.08);
-  --shadow-md:  0 4px 6px -1px rgba(44, 36, 22, 0.10), 0 2px 4px -2px rgba(44, 36, 22, 0.08);
-  --shadow-lg:  0 10px 15px -3px rgba(44, 36, 22, 0.10), 0 4px 6px -4px rgba(44, 36, 22, 0.06);
+  --shadow-sm:  0 1px 2px 0 rgba(30, 28, 24, 0.06);
+  --shadow:     0 1px 3px 0 rgba(30, 28, 24, 0.10), 0 1px 2px -1px rgba(30, 28, 24, 0.08);
+  --shadow-md:  0 4px 6px -1px rgba(30, 28, 24, 0.10), 0 2px 4px -2px rgba(30, 28, 24, 0.08);
+  --shadow-lg:  0 10px 15px -3px rgba(30, 28, 24, 0.10), 0 4px 6px -4px rgba(30, 28, 24, 0.06);
 
   /* ── Transitions ───────────────────────────────────────────────── */
   --transition-fast: 150ms ease;

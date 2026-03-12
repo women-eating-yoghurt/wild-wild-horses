@@ -343,14 +343,17 @@ Design tokens are in `src/assets/css/tokens.css`.
 
 Key tokens you might want to customize:
 
-| Token | Default value | Role |
-|-------|---------------|------|
-| `--color-accent` | `#5c7a4e` (forest green) | Links, buttons, active nav |
-| `--color-surface` | `#faf8f5` (warm off-white) | Page background |
-| `--color-surface-alt` | `#f3ede4` (warm beige) | Section alternating background |
-| `--color-text` | `#2c2416` (dark brown) | Body text |
+| Token | Value | Role |
+|-------|-------|------|
+| `--color-accent` | `#c9991a` (golden yellow) | Links, buttons, active nav |
+| `--color-accent-hover` | `#a87d10` (deeper gold) | Button/link hover state |
+| `--color-surface` | `#f7f2e8` (chalky off-white) | Page background |
+| `--color-surface-alt` | `#ede5d0` (warm tan) | Section alternating background |
+| `--color-text` | `#1e1c18` (near-black charcoal) | Body text |
 | `--font-heading` | Playfair Display (serif) | All headings |
 | `--font-sans` | Lato (sans-serif) | Body, nav, buttons |
+
+Note: primary buttons use dark text on the yellow background for contrast. This is set in `components.css` and should be kept in sync if the accent color is changed to something dark enough to support white text.
 
 Google Fonts (Playfair Display + Lato) are loaded in `src/_includes/layouts/base.njk`. To change fonts, update both the `<link>` tag there and the `--font-heading` / `--font-sans` tokens.
 
