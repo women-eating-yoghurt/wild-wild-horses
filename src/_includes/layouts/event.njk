@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+---
+<div class="container">
+  <article class="event">
+    <header class="event__header">
+      <a href="/events/" class="back-link">&larr; All Events</a>
+      <h1 class="event__title">{{ title }}</h1>
+      <div class="event__meta">
+        <div class="event__datetime">
+          <time datetime="{{ event_date | isoDate }}">
+            {{ event_date | readableDate }}{% if event_date %} at {{ event_date | readableTime }}{% endif %}
+          </time>
+          {% if event_end_date %}
+            <span class="event__meta-sep">&ndash;</span>
+            <time datetime="{{ event_end_date | isoDate }}">{{ event_end_date | readableTime }}</time>
+          {% endif %}
+        </div>
+        {% if location %}
+          <div class="event__location">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            {{ location }}
+          </div>
+        {% endif %}
+      </div>
+      {% if ticket_url %}
+        <a href="{{ ticket_url }}" class="button button--primary" target="_blank" rel="noopener">Get Tickets / RSVP</a>
+      {% endif %}
+    </header>
+
+    {% if featured_image %}
+      <div class="event__hero-image-wrap">
+        <img src="{{ featured_image }}" alt="{{ title }}" class="event__hero-image" />
+      </div>
+    {% endif %}
+
+    <div class="event__body prose">
+      {{ content | safe }}
+    </div>
+
+    <footer class="event__footer">
+      <a href="/events/" class="back-link">&larr; Back to Events</a>
+    </footer>
+  </article>
+</div>

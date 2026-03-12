@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Blog
+permalink: /blog/
+description: Stories, updates, and perspectives from our community.
+---
+
+<div class="container">
+  <div class="page-header">
+    <h1 class="page-header__title">Blog</h1>
+    <p class="page-header__intro">Stories, updates, and perspectives from our community.</p>
+  </div>
+
+  {% if collections.blog.length %}
+    <div class="post-cards post-cards--full">
+      {% for post in collections.blog %}
+        {% include "partials/post-card.njk" %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <p>No posts yet. Check back soon!</p>
+    </div>
+  {% endif %}
+</div>

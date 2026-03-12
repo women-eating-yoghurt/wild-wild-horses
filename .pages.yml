@@ -1,0 +1,162 @@
+media:
+  input: src/assets/images/uploads
+  output: /assets/images/uploads
+
+content:
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: src/content/blog
+    view:
+      fields: [title, date]
+    filename: "{year}-{month}-{day}-{primary}"
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+        default: layouts/post.njk
+      - name: title
+        type: string
+        label: Title
+      - name: date
+        type: date
+        label: Publish Date
+      - name: description
+        type: text
+        label: Description
+      - name: featured_image
+        type: image
+        label: Featured Image
+        required: false
+      - name: tags
+        type: string
+        list: true
+        default: [blog]
+      - name: body
+        type: rich-text
+        label: Content
+
+  - name: events
+    label: Events
+    type: collection
+    path: src/content/events
+    filename: "{year}-{month}-{day}-{primary}"
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+        default: layouts/event.njk
+      - name: title
+        type: string
+        label: Title
+      - name: event_date
+        type: date
+        label: Event Date & Start Time
+        options:
+          time: true
+          format: "YYYY-MM-DDTHH:mm:ss"
+      - name: event_end_date
+        type: date
+        label: Event End Time
+        required: false
+        options:
+          time: true
+          format: "YYYY-MM-DDTHH:mm:ss"
+      - name: location
+        type: string
+        label: Location
+      - name: description
+        type: text
+        label: Short Description
+      - name: featured_image
+        type: image
+        label: Featured Image
+        required: false
+      - name: ticket_url
+        type: string
+        label: Ticket / RSVP URL
+        required: false
+      - name: tags
+        type: string
+        list: true
+        hidden: true
+        default: [events]
+      - name: body
+        type: rich-text
+        label: Full Event Details
+
+  - name: site
+    label: Site Settings
+    type: file
+    path: src/_data/site.yml
+    fields:
+      - name: title
+        type: string
+        label: Site Title
+      - name: description
+        type: text
+        label: Site Description
+      - name: author
+        type: string
+        label: Organization Name
+      - name: email
+        type: string
+        label: Contact Email
+        required: false
+      - name: favicon
+        type: image
+        label: Favicon
+        required: false
+
+  - name: navigation
+    label: Navigation
+    type: file
+    path: src/_data/navigation.yml
+    fields:
+      - name: main
+        type: object
+        list: true
+        label: Menu Items
+        fields:
+          - name: label
+            type: string
+          - name: url
+            type: string
+
+  - name: contact
+    label: Contact Page
+    type: file
+    path: src/_data/contact.yml
+    fields:
+      - name: heading
+        type: string
+        label: Page Heading
+      - name: intro
+        type: text
+        label: Intro Text
+      - name: email
+        type: string
+        label: Email Address
+        required: false
+      - name: phone
+        type: string
+        label: Phone Number
+        required: false
+      - name: address
+        type: text
+        label: Mailing Address
+        required: false
+      - name: links
+        label: Social Media Links
+        type: object
+        list: true
+        fields:
+          - name: platform
+            type: string
+            label: Platform (e.g. Instagram)
+          - name: url
+            type: string
+            label: URL
+          - name: handle
+            type: string
+            label: Handle or display name

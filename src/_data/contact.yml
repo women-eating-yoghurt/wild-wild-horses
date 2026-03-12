@@ -1,0 +1,15 @@
+heading: Get in Touch
+intro: We'd love to connect! Reach out by email, phone, or find us on social media.
+email: hello@example.org
+phone: "(555) 000-1234"
+address: "123 Main Street\nYour City, ST 00000"
+links:
+  - platform: Instagram
+    url: https://instagram.com/example
+    handle: "@yourhandle"
+  - platform: Facebook
+    url: https://facebook.com/example
+    handle: Your Organization Name
+  - platform: YouTube
+    url: https://youtube.com/@example
+    handle: "@yourhandle"

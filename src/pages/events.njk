@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+title: Events
+permalink: /events/
+description: Join us for gatherings, workshops, and community events throughout the year.
+---
+
+<div class="container">
+  <div class="page-header">
+    <h1 class="page-header__title">Events</h1>
+    <p class="page-header__intro">Join us for gatherings, workshops, and community events throughout the year.</p>
+  </div>
+
+  {% if collections.upcomingEvents.length %}
+    <div class="section-header">
+      <h2 class="section-header__title">Upcoming Events</h2>
+    </div>
+    <div class="event-cards post-cards--full">
+      {% for event in collections.upcomingEvents %}
+        {% include "partials/event-card.njk" %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <p>No upcoming events right now. Check back soon!</p>
+    </div>
+  {% endif %}
+</div>

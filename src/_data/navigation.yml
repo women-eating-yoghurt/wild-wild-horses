@@ -1,0 +1,9 @@
+main:
+  - label: Home
+    url: /
+  - label: Events
+    url: /events/
+  - label: Blog
+    url: /blog/
+  - label: Contact
+    url: /contact/
