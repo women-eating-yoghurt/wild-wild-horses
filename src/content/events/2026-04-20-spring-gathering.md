@@ -1,8 +1,8 @@
 ---
 layout: layouts/event.njk
 title: Spring Gathering & Potluck Dinner
-event_date: 2026-04-20T17:30:00
-event_end_date: 2026-04-20T20:30:00
+event_date: 2026-04-20T17:30
+event_end_date: 2026-04-20T20:30
 location: Community Hall, 123 Main Street
 description: Celebrate the season with good food, good people, and great conversation. Bring a dish to share and an appetite for connection.
 featured_image: ""
