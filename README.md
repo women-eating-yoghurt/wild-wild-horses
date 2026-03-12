@@ -4,7 +4,7 @@ A static website starter built with [Eleventy (11ty)](https://www.11ty.dev/), ma
 
 **Stack at a glance:**
 - **Builder:** Eleventy v3 — converts Markdown and Nunjucks templates to HTML
-- **CMS:** Pages CMS — a web-based editor your client uses to write posts and update content, no coding needed
+- **CMS:** Pages CMS — a web-based editor for writing posts and updating content, no coding needed
 - **Hosting:** GitHub Pages — free static hosting with automatic deploys on every save
 - **Contact:** A static contact info page with email, phone, address, and social links
 
@@ -28,26 +28,20 @@ A static website starter built with [Eleventy (11ty)](https://www.11ty.dev/), ma
 
 ### Prerequisites
 
-You (the developer) need:
+You need:
 - [Node.js](https://nodejs.org/) v18 or later
 - A GitHub account
 - Git
 
-Your client (Monica) needs:
+Any additional users (e.g. a content editor) need:
 - A GitHub account (free) — required to use Pages CMS
-- Nothing else — she'll manage all content through a browser at [app.pagescms.org](https://app.pagescms.org)
+- Nothing else — they'll manage all content through a browser at [app.pagescms.org](https://app.pagescms.org)
 
 ---
 
 ### Step 1 — Set up the GitHub repository
 
-The repository **women-eating-yoghurt/wild-wild-horses** is already configured as the upstream for this local directory.
 
-If you're setting up under a different account or org:
-```bash
-git remote set-url origin https://github.com/<org>/<repo>.git
-git push -u origin main
-```
 
 ---
 
@@ -81,12 +75,12 @@ Pages CMS is a hosted web application that reads and writes files directly in yo
 
 Pages CMS authenticates using your GitHub account. Every save creates a commit to the `main` branch, which triggers a GitHub Actions build and redeploys the site — typically within a minute.
 
-**Granting your client access:**
+**Granting additional users access:**
 
-Your client needs to be a GitHub repository collaborator with **Write** access:
+Any additional users who will edit content need to be GitHub repository collaborators with **Write** access:
 
 1. Go to repository → **Settings** → **Collaborators** → **Add people**
-2. Enter Monica's GitHub username and send the invitation
+2. Enter their GitHub username and send the invitation
 3. Once accepted, she can sign in at [app.pagescms.org](https://app.pagescms.org) with her own GitHub account and select the repository
 
 > Pages CMS respects GitHub's permissions model — only collaborators with write access can edit content.
@@ -132,13 +126,13 @@ main:
     url: /contact/
 ```
 
-All of these files can also be edited by Monica through Pages CMS (under **Site Settings**, **Contact Page**, and **Navigation**) without touching any code.
+All of these files can also be edited through Pages CMS (under **Site Settings**, **Contact Page**, and **Navigation**) without touching any code.
 
 ---
 
 ## Day-to-day content management
 
-Once setup is complete, Monica manages everything through [app.pagescms.org](https://app.pagescms.org) — no code, no terminal.
+Once setup is complete, content can be managed entirely through [app.pagescms.org](https://app.pagescms.org) — no code, no terminal.
 
 ### Writing a blog post
 
@@ -322,12 +316,12 @@ Required repository permissions (set automatically when GH Pages source is set t
 
 ### Custom domain (optional)
 
-To use a custom domain like `monicasgarden.org`:
+To use a custom domain like `yourorg.org`:
 
 1. Go to repository → **Settings** → **Pages** → **Custom domain**
 2. Enter the domain name and click **Save**
 3. Configure DNS at your domain registrar:
-   - **Apex domain** (e.g. `monicasgarden.org`): Add four `A` records pointing to GitHub's IPs:
+   - **Apex domain** (e.g. `yourorg.org`): Add four `A` records pointing to GitHub's IPs:
      ```
      185.199.108.153
      185.199.109.153
@@ -345,7 +339,7 @@ Full instructions: [docs.github.com/en/pages/configuring-a-custom-domain-for-you
 
 ## Styling
 
-Design tokens are in `src/assets/css/tokens.css`. The palette is warm and earthy — dark browns, forest green accents, warm off-white backgrounds — designed to feel approachable and natural for a community non-profit.
+Design tokens are in `src/assets/css/tokens.css`. 
 
 Key tokens you might want to customize:
 
@@ -382,7 +376,6 @@ Images are committed to `src/assets/images/uploads/` and only appear after the n
 
 ## Cost summary
 
-Everything needed to run this site is free:
 
 | Service | Free tier |
 |---------|-----------|

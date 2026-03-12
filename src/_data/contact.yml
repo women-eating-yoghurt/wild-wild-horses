@@ -1,15 +1,15 @@
 heading: Get in Touch
 intro: We'd love to connect! Reach out by email, phone, or find us on social media.
-email: hello@monicasgarden.org
-phone: "(555) 867-5309"
-address: "123 Elm Street, Suite 4\nSpringfield, OR 97401"
+email: hello@example.org
+phone: "(555) 000-1234"
+address: "123 Main Street\nYour City, ST 00000"
 links:
   - platform: Instagram
     url: https://instagram.com/example
-    handle: "@monicasgarden"
+    handle: "@yourhandle"
   - platform: Facebook
     url: https://facebook.com/example
-    handle: Monica's Garden
+    handle: Your Organization Name
   - platform: YouTube
     url: https://youtube.com/@example
-    handle: "@monicasgarden"
+    handle: "@yourhandle"
