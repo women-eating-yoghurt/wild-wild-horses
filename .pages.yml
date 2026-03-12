@@ -56,14 +56,14 @@ content:
         label: Event Date & Start Time
         options:
           time: true
-          format: "YYYY-MM-DDTHH:mm:ss"
+          format: "yyyy-MM-dd'T'HH:mm:ss"
       - name: event_end_date
         type: date
         label: Event End Time
         required: false
         options:
           time: true
-          format: "YYYY-MM-DDTHH:mm:ss"
+          format: "yyyy-MM-dd'T'HH:mm:ss"
       - name: location
         type: string
         label: Location
