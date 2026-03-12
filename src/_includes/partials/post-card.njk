@@ -1,17 +1,17 @@
 <article class="card card--post">
   {% if post.data.featured_image %}
-    <a href="{{ post.url }}" class="card__image-link" tabindex="-1" aria-hidden="true">
+    <a href="{{ post.url | url }}" class="card__image-link" tabindex="-1" aria-hidden="true">
       <img src="{{ post.data.featured_image }}" alt="" class="card__image" loading="lazy" />
     </a>
   {% endif %}
   <div class="card__body">
     <time class="card__date" datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
     <h2 class="card__title">
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
     </h2>
     {% if post.data.description %}
       <p class="card__excerpt">{{ post.data.description }}</p>
     {% endif %}
-    <a href="{{ post.url }}" class="card__read-more">Read more &rarr;</a>
+    <a href="{{ post.url | url }}" class="card__read-more">Read more &rarr;</a>
   </div>
 </article>

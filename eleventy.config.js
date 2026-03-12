@@ -22,7 +22,7 @@ export default async function (eleventyConfig) {
       sizes: "(min-width: 1024px) 1200px, (min-width: 640px) 800px, 100vw",
     },
     outputDir: "./_site/assets/images/",
-    urlPath: "/assets/images/",
+    urlPath: "/wild-wild-horses/assets/images/",
   });
 
   // Passthrough copies — assets go straight to _site untouched
@@ -38,6 +38,7 @@ export default async function (eleventyConfig) {
 }
 
 export const config = {
+  pathPrefix: "/wild-wild-horses/",
   dir: {
     input: "src",
     output: "_site",

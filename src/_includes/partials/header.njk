@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="site-header__inner container">
-    <a href="/" class="site-header__logo" aria-label="{{ site.title }} — home">
+    <a href="{{ '/' | url }}" class="site-header__logo" aria-label="{{ site.title }} — home">
       {{ site.title }}
     </a>
     <button class="site-nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
@@ -12,7 +12,7 @@
       <ul class="site-nav__list" role="list">
         {% for item in navigation.main %}
           <li class="site-nav__item">
-            <a href="{{ item.url }}" class="site-nav__link{% if page.url == item.url %} site-nav__link--active{% endif %}">
+            <a href="{{ item.url | url }}" class="site-nav__link{% if page.url == item.url %} site-nav__link--active{% endif %}">
               {{ item.label }}
             </a>
           </li>

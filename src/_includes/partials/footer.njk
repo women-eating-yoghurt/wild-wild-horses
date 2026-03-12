@@ -9,7 +9,7 @@
     <nav class="site-footer__nav" aria-label="Footer navigation">
       <ul role="list">
         {% for item in navigation.main %}
-          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          <li><a href="{{ item.url | url }}">{{ item.label }}</a></li>
         {% endfor %}
       </ul>
     </nav>

@@ -4,7 +4,7 @@ layout: layouts/base.njk
 <div class="container">
   <article class="event">
     <header class="event__header">
-      <a href="/events/" class="back-link">&larr; All Events</a>
+      <a href="{{ '/events/' | url }}" class="back-link">&larr; All Events</a>
       <h1 class="event__title">{{ title }}</h1>
       <div class="event__meta">
         <div class="event__datetime">
@@ -39,7 +39,7 @@ layout: layouts/base.njk
     </div>
 
     <footer class="event__footer">
-      <a href="/events/" class="back-link">&larr; Back to Events</a>
+      <a href="{{ '/events/' | url }}" class="back-link">&larr; Back to Events</a>
     </footer>
   </article>
 </div>

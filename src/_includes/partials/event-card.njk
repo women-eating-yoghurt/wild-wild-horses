@@ -1,6 +1,6 @@
 <article class="card card--event">
   {% if event.data.featured_image %}
-    <a href="{{ event.url }}" class="card__image-link" tabindex="-1" aria-hidden="true">
+    <a href="{{ event.url | url }}" class="card__image-link" tabindex="-1" aria-hidden="true">
       <img src="{{ event.data.featured_image }}" alt="" class="card__image" loading="lazy" />
     </a>
   {% endif %}
@@ -9,7 +9,7 @@
       {{ event.data.event_date | readableDate }}
     </time>
     <h3 class="card__title">
-      <a href="{{ event.url }}">{{ event.data.title }}</a>
+      <a href="{{ event.url | url }}">{{ event.data.title }}</a>
     </h3>
     {% if event.data.location %}
       <p class="card__location">
@@ -21,7 +21,7 @@
       <p class="card__excerpt">{{ event.data.description }}</p>
     {% endif %}
     <div class="card__actions">
-      <a href="{{ event.url }}" class="button button--outline">Event Details</a>
+      <a href="{{ event.url | url }}" class="button button--outline">Event Details</a>
       {% if event.data.ticket_url %}
         <a href="{{ event.data.ticket_url }}" class="button button--primary" target="_blank" rel="noopener">Get Tickets</a>
       {% endif %}
