@@ -1,31 +1,32 @@
 /*
  * tokens.css — design tokens
  *
- * Palette drawn from a hand-painted community mural: dominant golden
- * yellow, dusty sky blue, chalky off-white surfaces, and near-black
- * painted lettering. Warm, handmade, community non-profit feel.
+ * Palette drawn from a hand-painted community mural: dusty sky blue
+ * as the primary accent, coral-red as a warm counterpoint, clean
+ * white surfaces with the painted near-black for text. Handmade and
+ * community-spirited without leaning on beige.
  */
 
 :root {
   /* ── Color palette ─────────────────────────────────────────────── */
-  --color-accent:        #c9991a;   /* golden yellow */
-  --color-accent-hover:  #a87d10;   /* deeper gold */
-  --color-accent-subtle: #faf3dc;   /* pale yellow tint */
+  --color-accent:        #4a8fa8;   /* dusty sky blue */
+  --color-accent-hover:  #336e86;   /* deeper blue */
+  --color-accent-subtle: #e4f0f5;   /* pale blue tint */
 
-  --color-surface:       #f7f2e8;   /* chalky off-white */
-  --color-surface-alt:   #ede5d0;   /* warm tan */
+  --color-surface:       #f8f6f2;   /* warm white */
+  --color-surface-alt:   #eef0ed;   /* very light sage */
   --color-surface-raised:#ffffff;
-  --color-border:        #d8ccb0;
-  --color-border-light:  #ece5d2;
+  --color-border:        #d0d4cc;
+  --color-border-light:  #e4e6e2;
 
-  --color-text:          #1e1c18;   /* near-black charcoal */
-  --color-text-muted:    #5a5340;   /* warm dark tan */
-  --color-text-subtle:   #96886e;   /* mid tan */
-  --color-text-inverse:  #f7f2e8;
+  --color-text:          #1a1c1e;   /* painted near-black */
+  --color-text-muted:    #4a5258;   /* cool dark grey */
+  --color-text-subtle:   #8a9298;   /* mid grey */
+  --color-text-inverse:  #ffffff;
 
-  --color-footer-bg:     #1e1c18;
-  --color-footer-text:   rgba(247, 242, 232, 0.65);
-  --color-footer-link:   rgba(247, 242, 232, 0.80);
+  --color-footer-bg:     #1a1c1e;
+  --color-footer-text:   rgba(248, 246, 242, 0.65);
+  --color-footer-link:   rgba(248, 246, 242, 0.80);
 
   /* ── Typography ────────────────────────────────────────────────── */
   --font-sans:    "Lato", system-ui, -apple-system, Helvetica, Arial, sans-serif;
@@ -87,10 +88,10 @@
   --gutter:        clamp(1rem, 4vw, 2rem);
 
   /* ── Shadows ───────────────────────────────────────────────────── */
-  --shadow-sm:  0 1px 2px 0 rgba(30, 28, 24, 0.06);
-  --shadow:     0 1px 3px 0 rgba(30, 28, 24, 0.10), 0 1px 2px -1px rgba(30, 28, 24, 0.08);
-  --shadow-md:  0 4px 6px -1px rgba(30, 28, 24, 0.10), 0 2px 4px -2px rgba(30, 28, 24, 0.08);
-  --shadow-lg:  0 10px 15px -3px rgba(30, 28, 24, 0.10), 0 4px 6px -4px rgba(30, 28, 24, 0.06);
+  --shadow-sm:  0 1px 2px 0 rgba(26, 28, 30, 0.06);
+  --shadow:     0 1px 3px 0 rgba(26, 28, 30, 0.10), 0 1px 2px -1px rgba(26, 28, 30, 0.08);
+  --shadow-md:  0 4px 6px -1px rgba(26, 28, 30, 0.10), 0 2px 4px -2px rgba(26, 28, 30, 0.08);
+  --shadow-lg:  0 10px 15px -3px rgba(26, 28, 30, 0.10), 0 4px 6px -4px rgba(26, 28, 30, 0.06);
 
   /* ── Transitions ───────────────────────────────────────────────── */
   --transition-fast: 150ms ease;

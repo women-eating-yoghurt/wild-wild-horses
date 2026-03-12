@@ -170,7 +170,7 @@
 
 .button--primary {
   background-color: var(--color-accent);
-  color: var(--color-text);
+  color: var(--color-text-inverse);
   border-color: var(--color-accent);
 }
 
@@ -182,13 +182,13 @@
 
 .button--outline {
   background-color: transparent;
-  color: var(--color-accent-hover);
+  color: var(--color-accent);
   border-color: var(--color-accent);
 }
 
 .button--outline:hover {
   background-color: var(--color-accent);
-  color: var(--color-text);
+  color: var(--color-text-inverse);
 }
 
 /* ── Cards ─────────────────────────────────────────────────────── */
