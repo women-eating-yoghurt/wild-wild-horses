@@ -31,8 +31,10 @@ content:
         required: false
       - name: tags
         type: string
-        list: true
-        default: [blog]
+        label: Tags
+        list:
+          min: 0
+          default: [blog]
       - name: body
         type: rich-text
         label: Content
@@ -80,9 +82,10 @@ content:
         required: false
       - name: tags
         type: string
-        list: true
-        hidden: true
-        default: [events]
+        label: Tags
+        list:
+          min: 0
+          default: [events]
       - name: body
         type: rich-text
         label: Full Event Details
