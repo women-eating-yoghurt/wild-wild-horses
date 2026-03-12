@@ -1,0 +1,15 @@
+heading: Get in Touch
+intro: We'd love to connect! Reach out by email, phone, or find us on social media.
+email: hello@monicasgarden.org
+phone: "(555) 867-5309"
+address: "123 Elm Street, Suite 4\nSpringfield, OR 97401"
+links:
+  - platform: Instagram
+    url: https://instagram.com/example
+    handle: "@monicasgarden"
+  - platform: Facebook
+    url: https://facebook.com/example
+    handle: Monica's Garden
+  - platform: YouTube
+    url: https://youtube.com/@example
+    handle: "@monicasgarden"

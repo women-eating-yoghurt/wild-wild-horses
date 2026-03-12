@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+title: Contact
+permalink: /contact/
+description: Get in touch with our team.
+---
+
+<div class="container">
+  <div class="page-header">
+    <h1 class="page-header__title">{{ contact.heading }}</h1>
+    {% if contact.intro %}
+      <p class="page-header__intro">{{ contact.intro }}</p>
+    {% endif %}
+  </div>
+
+  <div class="contact-page">
+
+    <div class="contact-details">
+      {% if contact.email %}
+        <div class="contact-detail">
+          <span class="contact-detail__label">Email</span>
+          <a href="mailto:{{ contact.email }}" class="contact-detail__value">{{ contact.email }}</a>
+        </div>
+      {% endif %}
+
+      {% if contact.phone %}
+        <div class="contact-detail">
+          <span class="contact-detail__label">Phone</span>
+          <a href="tel:{{ contact.phone | replace('(', '') | replace(')', '') | replace(' ', '-') }}" class="contact-detail__value">{{ contact.phone }}</a>
+        </div>
+      {% endif %}
+
+      {% if contact.address %}
+        <div class="contact-detail">
+          <span class="contact-detail__label">Address</span>
+          <span class="contact-detail__value">{{ contact.address | nl2br | safe }}</span>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if contact.links.length %}
+      <div class="contact-social">
+        <h2 class="contact-social__heading">Find Us Online</h2>
+        <ul class="find-us-list" role="list">
+          {% for link in contact.links %}
+            <li class="find-us-item">
+              <a href="{{ link.url }}" class="find-us-link" target="_blank" rel="noopener noreferrer">
+                <span class="find-us-link__platform">{{ link.platform }}</span>
+                <span class="find-us-link__handle">{{ link.handle }}</span>
+                <svg class="find-us-link__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+  </div>
+</div>

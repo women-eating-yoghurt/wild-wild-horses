@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+title: Home
+permalink: /
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Welcome</p>
+      <h1 class="hero__title">{{ site.title }}</h1>
+      <p class="hero__tagline">{{ site.description }}</p>
+      <div class="hero__actions">
+        <a href="/events/" class="button button--primary">See Upcoming Events</a>
+        <a href="/contact/" class="button button--outline">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="events-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">Upcoming Events</h2>
+      <a href="/events/" class="section-header__link">All events &rarr;</a>
+    </div>
+    {% set upcomingList = collections.upcomingEvents | limit(3) %}
+    {% if upcomingList.length %}
+      <div class="event-cards">
+        {% for event in upcomingList %}
+          {% include "partials/event-card.njk" %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <p>No upcoming events right now. Check back soon!</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% set recentPosts = collections.blog | limit(3) %}
+{% if recentPosts.length %}
+<section class="blog-section blog-section--home">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">Latest from the Blog</h2>
+      <a href="/blog/" class="section-header__link">All posts &rarr;</a>
+    </div>
+    <div class="post-cards">
+      {% for post in recentPosts %}
+        {% include "partials/post-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

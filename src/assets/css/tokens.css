@@ -1,0 +1,99 @@
+/*
+ * tokens.css — design tokens for the Bark-inspired warm earth theme
+ *
+ * Warm, natural, earthy palette with organic serif typography.
+ * Inspired by community/nature/non-profit sites: think warm beiges,
+ * forest greens, earthy terracottas, and generous whitespace.
+ */
+
+:root {
+  /* ── Color palette ─────────────────────────────────────────────── */
+  --color-accent:        #5c7a4e;   /* forest green */
+  --color-accent-hover:  #4a6340;   /* darker green */
+  --color-accent-subtle: #eef3eb;   /* pale green */
+
+  --color-surface:       #faf8f5;   /* warm off-white */
+  --color-surface-alt:   #f3ede4;   /* warm beige */
+  --color-surface-raised:#ffffff;
+  --color-border:        #ddd5c8;
+  --color-border-light:  #ebe5dc;
+
+  --color-text:          #2c2416;   /* very dark brown */
+  --color-text-muted:    #6b5e4e;   /* medium brown */
+  --color-text-subtle:   #9c8e80;   /* light brown */
+  --color-text-inverse:  #ffffff;
+
+  --color-footer-bg:     #2c2416;
+  --color-footer-text:   rgba(250, 248, 245, 0.65);
+  --color-footer-link:   rgba(250, 248, 245, 0.75);
+
+  /* ── Typography ────────────────────────────────────────────────── */
+  --font-sans:    "Lato", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  --font-serif:   "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-heading: var(--font-serif);
+  --font-mono:    "Fira Code", Consolas, monospace;
+
+  --heading-weight:          700;
+  --heading-letter-spacing:  -0.01em;
+  --nav-weight:              500;
+  --body-leading:            1.7;
+
+  /* ── Radius ────────────────────────────────────────────────────── */
+  --radius-sm:   0.25rem;
+  --radius:      0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-full: 9999px;
+
+  /* ── Spacing scale ─────────────────────────────────────────────── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ── Font size scale ───────────────────────────────────────────── */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+
+  --leading-tight:   1.25;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.7;
+
+  --weight-normal:   400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ── Layout ────────────────────────────────────────────────────── */
+  --max-width:     76rem;
+  --content-width: 46rem;
+  --nav-height:    4rem;
+  --gutter:        clamp(1rem, 4vw, 2rem);
+
+  /* ── Shadows ───────────────────────────────────────────────────── */
+  --shadow-sm:  0 1px 2px 0 rgba(44, 36, 22, 0.06);
+  --shadow:     0 1px 3px 0 rgba(44, 36, 22, 0.10), 0 1px 2px -1px rgba(44, 36, 22, 0.08);
+  --shadow-md:  0 4px 6px -1px rgba(44, 36, 22, 0.10), 0 2px 4px -2px rgba(44, 36, 22, 0.08);
+  --shadow-lg:  0 10px 15px -3px rgba(44, 36, 22, 0.10), 0 4px 6px -4px rgba(44, 36, 22, 0.06);
+
+  /* ── Transitions ───────────────────────────────────────────────── */
+  --transition-fast: 150ms ease;
+  --transition:      250ms ease;
+  --transition-slow: 350ms ease;
+}

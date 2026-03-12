@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+---
+<div class="container">
+  <article class="post">
+    <header class="post__header">
+      <div class="post__meta">
+        <time datetime="{{ date | isoDate }}" class="post__date">{{ date | readableDate }}</time>
+      </div>
+      <h1 class="post__title">{{ title }}</h1>
+      {% if description %}
+        <p class="post__description">{{ description }}</p>
+      {% endif %}
+    </header>
+
+    {% if featured_image %}
+      <div class="post__hero-image-wrap">
+        <img src="{{ featured_image }}" alt="{{ title }}" class="post__hero-image" />
+      </div>
+    {% endif %}
+
+    <div class="post__body prose">
+      {{ content | safe }}
+    </div>
+
+    {% if video_url %}
+      {% youtubevideo video_url, video_caption %}
+    {% endif %}
+
+    <footer class="post__footer">
+      <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+    </footer>
+  </article>
+</div>
